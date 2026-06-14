@@ -17,7 +17,7 @@ export const BRAND = {
 };
 
 export const HERO = {
-  kicker: "Issue 07 — The Analog Revival",
+  kicker: "Issue 08 — The Analog Revival",
   title: ["The room", "disappears.", "Only the music remains."],
   lede:
     "A quarterly for people who hear the difference. We chase the warmth of vinyl, the silence between notes, and the gear that gets out of the way.",
