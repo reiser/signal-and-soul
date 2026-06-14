@@ -68,6 +68,12 @@ export const STORIES = [
     excerpt: "We A/B'd the same record across five cuts. The cheapest won. Here's what that tells you.",
     image: "1607853202273-797f1c22a38e",
   },
+  {
+    kicker: "Amplifiers",
+    title: "The warm glow of glass",
+    excerpt: "Why vacuum tubes still hold the key to the most lifelike mid-range you can buy.",
+    image: "1481277542470-605612bd2d61",
+  },
 ];
 
 export const REVIEWS = [
