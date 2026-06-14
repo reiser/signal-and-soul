@@ -80,6 +80,7 @@ export const REVIEWS = [
   {
     name: "Meridian-class headphones",
     sub: "Reference, closed-back",
+    category: "headphones",
     verdict: "Unflinching detail with a low end you can feel in your jaw.",
     rating: 4.5,
     image: "1583394838336-acd977736f90",
@@ -87,6 +88,7 @@ export const REVIEWS = [
   {
     name: "The all-analog turntable",
     sub: "Belt-drive, no compromise",
+    category: "turntables",
     verdict: "Silent backgrounds and a soundstage that steps a foot past the speakers.",
     rating: 5,
     image: "1545454675-3531b543be5d",
@@ -94,9 +96,26 @@ export const REVIEWS = [
   {
     name: "Studio-monitor bookshelves",
     sub: "Near-field, two-way",
+    category: "speakers",
     verdict: "Honest to a fault — they'll flatter a great mix and expose a bad one.",
     rating: 4,
     image: "1484704849700-f032a568e944",
+  },
+  {
+    name: "Silver-signature tube amp",
+    sub: "Class-A, single-ended triode",
+    category: "amplifiers",
+    verdict: "Breathes life into vocals. Not for hard-to-drive speakers, but pure magic with high-sensitivity horns.",
+    rating: 4.8,
+    image: "1511379938547-c1f69419868d",
+  },
+  {
+    name: "Reference electrostatic IEMs",
+    sub: "Multi-driver hybrid",
+    category: "headphones",
+    verdict: "Transient speed that rivals full-sized earspeakers. Requires a dedicated source to truly sing.",
+    rating: 4.7,
+    image: "1505740420928-5e560c06d30e",
   },
 ];
 

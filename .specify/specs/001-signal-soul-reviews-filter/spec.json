@@ -1,0 +1,43 @@
+{
+  "slug": "001-signal-soul-reviews-filter",
+  "title": "Signal & Soul Reviews Filter",
+  "status": "implemented",
+  "awaiting": "",
+  "requirements": [
+    "Interactive category filter for the reviews section.",
+    "Aesthetically pleasing, premium design matching the Signal & Soul editorial voice.",
+    "Smooth transitions when switching categories.",
+    "Robust end-to-end test verification."
+  ],
+  "acceptance": [
+    {
+      "text": "Reviews section displays filter buttons for categories (All, Headphones, Turntables, Speakers, Amplifiers).",
+      "done": true
+    },
+    {
+      "text": "Clicking a category filter updates the active state of the button and filters the displayed reviews list.",
+      "done": true
+    },
+    {
+      "text": "The reviews list updates smoothly with animations when a filter is selected.",
+      "done": true
+    },
+    {
+      "text": "The filter works correctly end-to-end as verified by a headless browser test.",
+      "done": true
+    }
+  ],
+  "plan": [
+    "Add category field to existing reviews in lib/content.ts and add 2-3 more reviews to make filtering interesting.",
+    "Update components/Reviews.tsx to include category filter buttons/pills with active states.",
+    "Implement state-based filtering of the REVIEWS array in components/Reviews.tsx.",
+    "Add smooth Framer Motion or CSS transitions for filtering.",
+    "Write and run an E2E test to verify the filter buttons work correctly."
+  ],
+  "outOfScope": [],
+  "evidence": [
+    "#1 #2 #3 #4: E2E test passed successfully verifying filtering of reviews by category."
+  ],
+  "createdAt": "2026-06-14T10:23:41.558Z",
+  "updatedAt": "2026-06-14T10:29:12.811Z"
+}
