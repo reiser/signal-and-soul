@@ -2,6 +2,7 @@ import { STORIES, img } from "@/lib/content";
 import { Reveal } from "@/components/ui/Reveal";
 import { Kicker } from "@/components/ui/bits";
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 // Featured stories — an editorial grid: one large lead card + a column of three.
 export function Stories() {
@@ -21,7 +22,7 @@ export function Stories() {
       <div className="grid gap-6 lg:grid-cols-2">
         {/* Lead */}
         <Reveal>
-          <a href="#feature" className="group block">
+          <Link href={`/stories/${lead.slug}`} className="group block">
             <div className="relative aspect-[16/11] overflow-hidden rounded-3xl border border-line/70 shadow-[0_30px_70px_-30px_rgba(20,17,15,0.4)]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -38,14 +39,14 @@ export function Stories() {
               </h3>
               <p className="mt-2 max-w-xl text-ink-soft">{lead.excerpt}</p>
             </div>
-          </a>
+          </Link>
         </Reveal>
 
         {/* Column of three */}
         <div className="flex flex-col gap-6">
           {rest.map((s, i) => (
             <Reveal key={s.title} delay={i * 0.06}>
-              <a href="#feature" className="group flex gap-5">
+              <Link href={`/stories/${s.slug}`} className="group flex gap-5">
                 <div className="relative aspect-square w-28 shrink-0 overflow-hidden rounded-2xl border border-line/70 sm:w-36">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
@@ -65,7 +66,7 @@ export function Stories() {
                     Read <ArrowUpRight className="h-3.5 w-3.5" />
                   </span>
                 </div>
-              </a>
+              </Link>
             </Reveal>
           ))}
         </div>
