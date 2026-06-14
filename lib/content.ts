@@ -68,6 +68,12 @@ export const STORIES = [
     excerpt: "We A/B'd the same record across five cuts. The cheapest won. Here's what that tells you.",
     image: "1607853202273-797f1c22a38e",
   },
+  {
+    kicker: "Amplifiers",
+    title: "The warm glow of glowing glass",
+    excerpt: "Why tube amplification remains the gold standard for listeners seeking soul over specs.",
+    image: "1511379938547-c1f69419868d",
+  },
 ];
 
 export const REVIEWS = [
