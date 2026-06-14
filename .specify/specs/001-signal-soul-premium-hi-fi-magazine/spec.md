@@ -1,6 +1,6 @@
 # Signal & Soul - Premium Hi-Fi Magazine
 
-**Status**: building
+**Status**: implemented
 **Created**: 2026-06-14T12:02:34.198Z
 
 ## Requirements
@@ -18,12 +18,12 @@
 
 ## Acceptance
 
-- [ ] Homepage renders with sticky navigation, bold editorial hero, stories grid, reviews section, long-form feature, gear gallery, and newsletter footer
-- [ ] Clicking a story card navigates to /stories/[slug] and displays the full article with Next.js 15 async params resolution
-- [ ] All images are real, high-quality Unsplash photos sourced via curate_images
-- [ ] No dead links or placeholder hrefs exist; all navigation and cards are fully wired
-- [ ] Git repository is connected to git@github.com:reiser/signal-and-soul.git and pushed to branch 'fresh-build'
-- [ ] E2E tests verify homepage rendering and successful navigation to a story detail page
+- [x] Homepage renders with sticky navigation, bold editorial hero, stories grid, reviews section, long-form feature, gear gallery, and newsletter footer
+- [x] Clicking a story card navigates to /stories/[slug] and displays the full article with Next.js 15 async params resolution
+- [x] All images are real, high-quality Unsplash photos sourced via curate_images
+- [x] No dead links or placeholder hrefs exist; all navigation and cards are fully wired
+- [x] Git repository is connected to git@github.com:reiser/signal-and-soul.git and pushed to branch 'fresh-build'
+- [x] E2E tests verify homepage rendering and successful navigation to a story detail page
 
 ## Plan
 
@@ -34,3 +34,7 @@
 5. Build the dynamic story detail page (app/stories/[slug]/page.tsx) using Next.js 15 async params
 6. Connect the Git repository and push the code to the 'fresh-build' branch
 7. Run E2E tests to verify rendering and interactive navigation, then open the preview
+
+## Verification evidence
+
+- #1 #2 #3 #4 #5 #6: E2E tests passed successfully and git push to fresh-build completed.

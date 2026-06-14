@@ -31,6 +31,21 @@ export interface GearItem {
 
 export const STORIES: Story[] = [
   {
+    slug: "return-of-reel-to-reel",
+    title: "The Return of Reel-to-Reel",
+    standfirst: "Why audiophiles are turning back to analog tape for the ultimate high-fidelity experience.",
+    category: "Analog",
+    author: "Julian Vance",
+    date: "October 30, 2024",
+    readTime: "5 min read",
+    image: "https://picsum.photos/seed/high-end-audio-turntable-vacuum-tube-spe-5/1600/900",
+    content: [
+      "For decades, the vinyl record has been the poster child of the analog revival. But for a small, dedicated group of ultra-high-end audiophiles, there is a format that stands even higher: reel-to-reel analog tape.",
+      "Reel-to-reel tape offers a level of dynamic range, frequency response, and pure physical presence that even the best vinyl pressings cannot match. When you listen to a master tape copy on a calibrated deck, you are hearing the music exactly as the artist and engineer heard it in the control room.",
+      "The resurgence of analog tape has led to a new wave of hardware restoration and boutique record labels releasing master-tape duplicates. It is a demanding, expensive, and utterly uncompromising format—but for those who seek the absolute peak of sound reproduction, reel-to-reel is the ultimate destination."
+    ]
+  },
+  {
     slug: "warmth-of-glass",
     title: "The Warmth of Glass: Why Vacuum Tubes Still Rule the High-End",
     standfirst: "In an era dominated by digital precision, the glowing vacuum tube remains the undisputed sovereign of pure, emotional sound reproduction.",
