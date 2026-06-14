@@ -27,7 +27,7 @@ export function Feature() {
         <div className="aspect-[16/8] overflow-hidden">
           <motion.img
             src={img(FEATURE.image, 1600)}
-            alt="A studio mixing console"
+            alt="Ein Studio-Mischpult"
             style={{ y }}
             className="h-[118%] w-full object-cover"
           />
@@ -62,7 +62,7 @@ export function Feature() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={img(FEATURE.inline, 1100)}
-            alt="A turntable in a listening room"
+            alt="Ein Plattenspieler in einem Hörraum"
             loading="lazy"
             className="aspect-[16/9] w-full object-cover"
           />

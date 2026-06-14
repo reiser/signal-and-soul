@@ -26,11 +26,11 @@ export function Newsletter() {
         <Reveal>
           <Disc3 className="mx-auto h-10 w-10 text-accent-soft" strokeWidth={1.4} />
           <h2 className="font-display mt-6 text-[clamp(2.4rem,6vw,4.5rem)] font-semibold leading-[1.0]">
-            Get the issue,<br />before the pressing sells out.
+            Hol dir die Ausgabe,<br />bevor die Pressung ausverkauft ist.
           </h2>
           <p className="mx-auto mt-5 max-w-md text-paper/70">
-            One email a quarter. The reviews, the long read, and the record of the
-            month — free, no noise.
+            Eine E-Mail pro Quartal. Die Tests, die lange Reportage und die Platte
+            des Monats — kostenlos, ohne Lärm.
           </p>
         </Reveal>
 
@@ -41,15 +41,15 @@ export function Newsletter() {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="you@example.com"
-              aria-label="Email address"
+              placeholder="du@beispiel.de"
+              aria-label="E-Mail-Adresse"
               className="w-full rounded-full border border-white/15 bg-white/[0.04] px-5 py-3.5 text-sm text-paper outline-none transition-colors placeholder:text-paper/40 focus:border-accent-soft"
             />
             <button
               type="submit"
               className="shrink-0 rounded-full bg-accent px-6 py-3.5 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
             >
-              {done ? "You're in" : "Subscribe"}
+              {done ? "Du bist dabei" : "Abonnieren"}
             </button>
           </form>
         </Reveal>
@@ -61,7 +61,7 @@ export function Newsletter() {
               animate={{ opacity: 1, y: 0 }}
               className="mt-4 inline-flex items-center gap-2 text-sm text-accent-soft"
             >
-              <Check className="h-4 w-4" /> Saved to your reading list — no backend, just vibes.
+              <Check className="h-4 w-4" /> Auf der Leseliste gespeichert — kein Backend, nur gute Vibes.
             </motion.p>
           )}
         </AnimatePresence>
@@ -79,7 +79,7 @@ export function Newsletter() {
             <span className="grid h-6 w-6 place-items-center rounded-full bg-accent text-white">
               <Check className="h-3.5 w-3.5" />
             </span>
-            You&rsquo;re on the list for Issue 08.
+            Du stehst auf der Liste für Ausgabe 08.
           </motion.div>
         )}
       </AnimatePresence>

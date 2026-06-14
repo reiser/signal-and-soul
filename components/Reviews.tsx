@@ -10,14 +10,14 @@ export function Reviews() {
         <Reveal className="max-w-2xl">
           <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-accent-soft">
             <span aria-hidden className="h-px w-6 bg-accent-soft/60" />
-            On the bench
+            Auf dem Prüfstand
           </span>
           <h2 className="font-display mt-4 text-4xl font-semibold sm:text-5xl">
-            Reviews, the long way.
+            Tests, auf die lange Art.
           </h2>
           <p className="mt-4 text-paper/70">
-            Weeks with the gear, in a treated room. No loaner gloss, no spec-sheet
-            shortcuts — just what it sounds like when you live with it.
+            Wochen mit dem Gerät, in einem behandelten Raum. Kein Leihglanz, keine
+            Datenblatt-Abkürzungen — nur das, was es klingt, wenn man mit ihm lebt.
           </p>
         </Reveal>
 
