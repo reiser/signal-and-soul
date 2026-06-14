@@ -50,7 +50,7 @@ export function Navbar() {
             type="button"
             aria-label="Menu"
             onClick={() => setOpen((v) => !v)}
-            className="grid h-10 w-10 place-items-center rounded-full border border-line md:hidden"
+            className="grid h-10 w-10 place-items-center rounded-full border border-line"
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -64,7 +64,7 @@ export function Navbar() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="overflow-hidden border-t border-line bg-paper md:hidden"
+            className="overflow-hidden border-t border-line bg-paper"
           >
             <div className="flex flex-col gap-1 px-5 py-3">
               {BRAND.nav.map((l) => (
