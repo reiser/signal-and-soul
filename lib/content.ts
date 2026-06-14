@@ -63,16 +63,16 @@ export const STORIES = [
     image: "1546435770-a3e426bf472b",
   },
   {
-    kicker: "Pressings",
-    title: "One album, five pressings",
-    excerpt: "We A/B'd the same record across five cuts. The cheapest won. Here's what that tells you.",
-    image: "1607853202273-797f1c22a38e",
-  },
-  {
     kicker: "Amplifiers",
     title: "The warm glow of glass",
     excerpt: "Why vacuum tubes still hold the key to the most lifelike mid-range you can buy.",
     image: "1481277542470-605612bd2d61",
+  },
+  {
+    kicker: "Tape",
+    title: "The reel-to-reel renaissance, quietly",
+    excerpt: "A small room in Berlin is shipping quarter-inch machines again. We spent a month with one — and the one record that finally made the case.",
+    image: "1571974599782-87624638275e",
   },
 ];
 
