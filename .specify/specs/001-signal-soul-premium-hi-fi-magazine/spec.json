@@ -1,0 +1,56 @@
+{
+  "slug": "001-signal-soul-premium-hi-fi-magazine",
+  "title": "Signal & Soul - Premium Hi-Fi Magazine",
+  "status": "building",
+  "awaiting": "",
+  "requirements": [
+    "Premium, glossy editorial design for a high-end sound & hi-fi magazine called 'Signal & Soul'",
+    "Sticky header navigation with links to key sections (Stories, Reviews, Features, Gear)",
+    "Bold editorial hero featuring a flagship story with rich typography and high-impact imagery",
+    "Interactive Stories grid with cards that link to individual dynamic article pages under /stories/[slug]",
+    "Dedicated Reviews section with rating badges and technical specs for premium audio gear",
+    "Long-form immersive Feature section with a parallax-like editorial layout",
+    "Visual Gear gallery showcasing beautiful close-ups of vacuum tubes, turntables, and headphones",
+    "Newsletter subscription form with success state and a comprehensive footer",
+    "Next.js 15 compliant dynamic routing using async params resolution",
+    "Git integration with remote push to 'fresh-build' branch"
+  ],
+  "acceptance": [
+    {
+      "text": "Homepage renders with sticky navigation, bold editorial hero, stories grid, reviews section, long-form feature, gear gallery, and newsletter footer",
+      "done": false
+    },
+    {
+      "text": "Clicking a story card navigates to /stories/[slug] and displays the full article with Next.js 15 async params resolution",
+      "done": false
+    },
+    {
+      "text": "All images are real, high-quality Unsplash photos sourced via curate_images",
+      "done": false
+    },
+    {
+      "text": "No dead links or placeholder hrefs exist; all navigation and cards are fully wired",
+      "done": false
+    },
+    {
+      "text": "Git repository is connected to git@github.com:reiser/signal-and-soul.git and pushed to branch 'fresh-build'",
+      "done": false
+    },
+    {
+      "text": "E2E tests verify homepage rendering and successful navigation to a story detail page",
+      "done": false
+    }
+  ],
+  "plan": [
+    "Source high-quality hi-fi and audio-related images using curate_images",
+    "Create the editorial content and stories data module to share between homepage and detail pages",
+    "Update app/globals.css and app/layout.tsx for a premium, glossy editorial aesthetic (serif typography, deep dark/gold/monochrome accents)",
+    "Build the sticky navigation, hero, reviews, feature, gear gallery, and newsletter components on the homepage (app/page.tsx)",
+    "Build the dynamic story detail page (app/stories/[slug]/page.tsx) using Next.js 15 async params",
+    "Connect the Git repository and push the code to the 'fresh-build' branch",
+    "Run E2E tests to verify rendering and interactive navigation, then open the preview"
+  ],
+  "outOfScope": [],
+  "evidence": [],
+  "createdAt": "2026-06-14T12:02:34.198Z"
+}
