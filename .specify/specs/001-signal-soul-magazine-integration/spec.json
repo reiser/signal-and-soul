@@ -1,0 +1,48 @@
+{
+  "slug": "001-signal-soul-magazine-integration",
+  "title": "Signal & Soul Magazine Integration",
+  "status": "implemented",
+  "awaiting": "",
+  "requirements": [
+    "Connect to the Signal & Soul repository",
+    "Checkout the magazine-signal-and-soul branch as preview-run",
+    "Install dependencies and restart the dev server",
+    "Add a new editorial story to the STORIES array in lib/content.ts",
+    "Commit and push the updated code to preview-run"
+  ],
+  "acceptance": [
+    {
+      "text": "Git repository is connected to git@github.com:reiser/signal-and-soul.git",
+      "done": true
+    },
+    {
+      "text": "Branch preview-run is checked out from origin/magazine-signal-and-soul",
+      "done": true
+    },
+    {
+      "text": "Dependencies are installed and dev server is restarted",
+      "done": true
+    },
+    {
+      "text": "A new story is added to the STORIES array in lib/content.ts in the editorial voice",
+      "done": true
+    },
+    {
+      "text": "Changes are committed and pushed to preview-run",
+      "done": true
+    }
+  ],
+  "plan": [
+    "Connect git repository",
+    "Fetch and checkout the magazine-signal-and-soul branch as preview-run",
+    "Install dependencies and restart the dev server",
+    "Add a new story to lib/content.ts STORIES array",
+    "Commit and push changes to preview-run"
+  ],
+  "outOfScope": [],
+  "evidence": [
+    "#1 #2 #3 #4 #5: Successfully connected git, checked out preview-run, installed dependencies, restarted dev server, added the new story, and verified with E2E test."
+  ],
+  "createdAt": "2026-06-14T09:44:03.651Z",
+  "updatedAt": "2026-06-14T09:45:22.787Z"
+}
