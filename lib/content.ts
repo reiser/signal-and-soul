@@ -21,7 +21,7 @@ export const HERO = {
   title: ["The room", "disappears.", "Only the music remains."],
   lede:
     "A quarterly for people who hear the difference. We chase the warmth of vinyl, the silence between notes, and the gear that gets out of the way.",
-  cta: { primary: "Start reading", secondary: "Subscribe — it's free" },
+  cta: { primary: "Start reading", secondary: "Subscribe free" },
   image: "1505740420928-5e560c06d30e", // sculptural studio headphones
 };
 
