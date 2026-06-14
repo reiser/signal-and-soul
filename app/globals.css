@@ -61,7 +61,29 @@ body {
   mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
 }
 
+/* Scroll/entrance reveals — CSS-driven so content is ALWAYS visible (never
+   trapped behind a JS animation that might not run in a given runtime). Plays on
+   load; `both` holds the final (visible) state. The .reveal-line variant rises
+   from below a clipped (overflow-hidden) parent for the editorial headline. */
+@keyframes ssReveal {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes ssLineUp {
+  from { transform: translateY(110%); }
+  to   { transform: translateY(0); }
+}
+.reveal {
+  animation: ssReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.reveal-line {
+  display: block;
+  animation: ssLineUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .animate-marquee { animation: none; }
+  .animate-marquee,
+  .reveal,
+  .reveal-line { animation: none; }
 }

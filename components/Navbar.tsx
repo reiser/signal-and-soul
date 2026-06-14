@@ -14,11 +14,8 @@ export function Navbar() {
   useMotionValueEvent(scrollY, "change", (y) => setSolid(y > 24));
 
   return (
-    <motion.header
-      initial={{ y: -24, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-500 ${
+    <header
+      className={`reveal fixed inset-x-0 top-0 z-50 transition-colors duration-500 ${
         solid
           ? "border-b border-line bg-paper/80 backdrop-blur-md"
           : "border-b border-transparent"
@@ -84,6 +81,6 @@ export function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.header>
+    </header>
   );
 }

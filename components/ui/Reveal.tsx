@@ -1,34 +1,26 @@
-"use client";
+import type { CSSProperties } from "react";
 
-import { motion } from "framer-motion";
-import type { Variants } from "framer-motion";
-import { fadeUp, inView } from "@/lib/motion";
-
-// Reveal — the one scroll-reveal primitive the whole magazine uses (no repeated
-// whileInView boilerplate). Pass a variant; defaults to a calm fade-up.
+// Reveal — the one entrance/scroll-reveal primitive the magazine uses. CSS-driven
+// (the .reveal class in globals.css) so content is ALWAYS rendered and never
+// trapped behind a JS animation that might not run in a given runtime. Plays on
+// load; `both` fill holds the final visible state. `delay` staggers a group.
+// Server-safe (no "use client"); usable from both server and client sections.
 export function Reveal({
   children,
-  variants = fadeUp,
-  className,
-  as = "div",
+  className = "",
+  as: Tag = "div",
   delay = 0,
 }: {
   children: React.ReactNode;
-  variants?: Variants;
   className?: string;
-  as?: "div" | "section" | "li" | "span" | "h2";
+  as?: keyof React.JSX.IntrinsicElements;
   delay?: number;
+  /** Accepted for call-site compatibility; the animation is CSS-driven. */
+  variants?: unknown;
 }) {
-  const Tag = motion[as];
+  const style: CSSProperties | undefined = delay ? { animationDelay: `${delay}s` } : undefined;
   return (
-    <Tag
-      className={className}
-      variants={variants}
-      initial="hidden"
-      whileInView="show"
-      viewport={inView}
-      transition={delay ? { delay } : undefined}
-    >
+    <Tag className={`reveal ${className}`.trim()} style={style}>
       {children}
     </Tag>
   );
