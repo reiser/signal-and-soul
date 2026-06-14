@@ -30,7 +30,7 @@ export function Hero() {
           <h1 className="font-display mt-5 text-[clamp(2.8rem,8vw,6.5rem)] font-semibold leading-[0.96]">
             {HERO.title.map((line, i) => (
               <span key={i} className="block overflow-hidden">
-                <span className="reveal-line" style={{ animationDelay: `${0.1 + i * 0.09}s` }}>
+                <span className="reveal-line" style={{ animationDelay: `${0.01 + i * 0.01}s` }}>
                   {i === HERO.title.length - 1 ? (
                     <span className="italic text-accent">{line}</span>
                   ) : (
@@ -43,14 +43,14 @@ export function Hero() {
 
           <p
             className="reveal mt-7 max-w-md text-lg leading-relaxed text-ink-soft"
-            style={{ animationDelay: "0.5s" }}
+            style={{ animationDelay: "0.03s" }}
           >
             {HERO.lede}
           </p>
 
           <div
             className="reveal mt-9 flex flex-wrap items-center gap-3"
-            style={{ animationDelay: "0.62s" }}
+            style={{ animationDelay: "0.05s" }}
           >
             <a
               href="#stories"

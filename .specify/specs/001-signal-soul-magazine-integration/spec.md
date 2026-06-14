@@ -30,3 +30,4 @@
 ## Verification evidence
 
 - #1 #2 #3 #4 #5: Successfully connected git, checked out preview-run, installed dependencies, restarted dev server, added the new story, and verified with E2E test.
+- #1: E2E test passed verifying 'Start reading' button text in the hero.
