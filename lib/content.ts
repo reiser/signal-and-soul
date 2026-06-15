@@ -88,6 +88,12 @@ export const STORIES = [
       "Every decade we are told the valve is finished. Every decade it comes back, a little warmer, a little smugger. A field report from the third renaissance of the glow — and the case for harmonic distortion as a feature, not a flaw.",
     image: "1564186763535-ebb21ef5277f",
   },
+  {
+    kicker: "Amplifiers",
+    title: "The quiet art of the first watt",
+    excerpt: "Why the best amps aren't the loudest — and what a single honest watt, well spent, does to a small room at midnight.",
+    image: "1525362081669-2b476bb628c3",
+  },
 ];
 
 export const REVIEWS = [
