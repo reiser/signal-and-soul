@@ -75,6 +75,19 @@ export const STORIES = [
     excerpt: "Eine kleine Werkstatt in Berlin liefert wieder Viertelzollgeräte. Wir lebten einen Monat mit einem — und mit der einen Platte, die das Argument endgültig machte.",
     image: "1571974599782-87624638275e",
   },
+  {
+    kicker: "Amplifiers",
+    title: "In defense of the glowing bottle",
+    excerpt: "A tube amp distorts everything — and somehow gets the voice more right than anything solid-state has ever managed.",
+    image: "1551817958-d9d86fb29431",
+  },
+  {
+    kicker: "The Argument for Glow",
+    title: "Why the tube amp refuses to die",
+    excerpt:
+      "Every decade we are told the valve is finished. Every decade it comes back, a little warmer, a little smugger. A field report from the third renaissance of the glow — and the case for harmonic distortion as a feature, not a flaw.",
+    image: "1564186763535-ebb21ef5277f",
+  },
 ];
 
 export const REVIEWS = [
