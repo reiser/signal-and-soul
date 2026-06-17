@@ -6,6 +6,7 @@ import { Stories } from "@/components/Stories";
 import { Reviews } from "@/components/Reviews";
 import { Feature } from "@/components/Feature";
 import { Spotlight } from "@/components/Spotlight";
+import { OpusOneFeature } from "@/components/OpusOneFeature";
 import { GearGallery } from "@/components/GearGallery";
 import { Newsletter } from "@/components/Newsletter";
 import { Footer } from "@/components/Footer";
@@ -24,6 +25,7 @@ export default function Home() {
         <Stories />
         <Reviews />
         <Feature />
+        <OpusOneFeature />
         <Spotlight />
         <GearGallery />
         <Newsletter />

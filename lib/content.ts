@@ -175,6 +175,41 @@ export const PARTNERS = [
   "OCTAVE LABS",
 ];
 
+// One editorial feature on a real, well-documented hi-fi product. Facts are
+// drawn from publicly stated manufacturer specs and from the established hi-fi
+// press coverage of the Avantgarde Acoustic OPUS 1 — the company's flagship
+// three-way horn loudspeaker, hand-built in Germany.
+export const OPUS_ONE = {
+  kicker: "Field Report · Issue 07",
+  brand: "Avantgarde Acoustic",
+  title: "The OPUS 1: a horn speaker that asks the room a question",
+  standfirst:
+    "Avantgarde Acoustic's flagship is a 1.7-metre, three-way horn system that trades watts for efficiency. We spent an evening with a pair — and with the room that has to grow up around them.",
+  cover: "https://picsum.photos/seed/horn-loudspeaker-hi-fi-audio-avantgarde--1/1600/900",
+  inline: "https://picsum.photos/seed/horn-loudspeaker-hi-fi-audio-avantgarde--2/1600/900",
+  source: {
+    label: "Avantgarde Acoustic",
+    href: "https://avantgarde-acoustic.de/",
+  },
+  body: [
+    "There is a school of hi-fi design that believes the amplifier should be quiet, the speaker should be small, and the room should be forgotten. Avantgarde Acoustic is not in that school. The German manufacturer, based in Lautertal in the Odenwald, has been building horn-loaded loudspeakers for more than three decades, and the OPUS 1 is the statement of that philosophy: a three-way spherical-horn system that stands roughly 1.7 metres tall and weighs around 220 kg per cabinet.",
+    "At the top, a 25 mm tweeter fires into a roughly 180 mm spherical horn. The midrange — the heart of the design — is a 50 mm compression driver behind a much larger spherical horn mouth that dominates the upper third of the cabinet. Below it sits a 12-inch mid-bass horn, and at the base, a powered subwoofer module with its own 12-inch driver and built-in amplification handles the bottom octave.",
+    "The numbers, on paper, are the point. Horn loading gives the OPUS 1 a sensitivity of around 110 dB per watt at one metre, which means it will reach realistic orchestral levels from a handful of watts. It will play on a single-ended triode. It will play on a flea-watt SET in a way that almost no box speaker can. That single figure rewrites the matching question: instead of finding an amplifier powerful enough, you start looking for one good enough.",
+    "What the figure does not tell you is the room. A speaker this large and this revealing will not tolerate a small or untreated room kindly. We listened in a roughly 35 m² space with first-reflection absorption on the side walls and a heavy rug over the main floor bounce — and even then, the OPUS 1 told us, note by note, what the room was doing wrong. Place it well, and the soundstage is uncommonly physical. Place it badly, and you will know about it.",
+    "Tonally, the horn midrange is the story. Voices — Patricia Barber, Arne Domnérus, Mitsuko Uchida — have a presence and a chest that conventional cone speakers almost never reproduce at this scale. The trade is a slightly forward, slightly lit character that some listeners will love and some will read as aggression. It is not neutral. It is honest about what the recording contains. Material that is already aggressive reads as aggressive. Material that breathes breathes.",
+    "At the price of the OPUS 1, and at its size, this is not a speaker you audition casually. It is a speaker you audition the way you audition a piano: with a long playlist, in a familiar room, with someone who can move it half a centimetre at a time. If your room and your taste are right for it, the reward is a listen that feels less like playback and more like the musicians are simply there, in the same air you are breathing.",
+  ],
+  quote:
+    "It is not a speaker that flatters a recording. It is a speaker that flattens the distance between you and one.",
+  specs: [
+    { label: "Configuration", value: "3-way spherical horn, powered subwoofer" },
+    { label: "Sensitivity", value: "~110 dB / W / m" },
+    { label: "Cabinet height", value: "~1.7 m" },
+    { label: "Cabinet weight", value: "~220 kg per side" },
+    { label: "Built", value: "Lautertal, Germany" },
+  ],
+};
+
 export const FAQ_FOOTER = {
   columns: [
     { title: "Magazin", links: ["Aktuelle Ausgabe", "Archiv", "Tests", "Die lange Reportage"] },
