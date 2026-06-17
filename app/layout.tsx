@@ -17,8 +17,14 @@ const grotesk = Space_Grotesk({
   weight: ["400", "500", "600", "700"],
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+
 export const metadata: Metadata = {
-  title: "Signal & Soul — The journal of high-fidelity listening",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Signal & Soul — The journal of high-fidelity listening",
+    template: "%s | Signal & Soul",
+  },
   description:
     "A quarterly for people who hear the difference. Long-form reviews, room craft, and the analog revival.",
 };

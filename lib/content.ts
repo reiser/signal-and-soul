@@ -1,28 +1,48 @@
 // Signal & Soul — editorial content for the magazine. Data-driven so every
 // section renders from one source (Atomic Design: content is the data layer).
-// All imagery is real Unsplash (verified 200), sized via the URL query params.
+// Local paths are served from public/; Unsplash IDs remain supported for older
+// entries.
 
 export const img = (id: string, w = 1200, q = 80) =>
-  `https://images.unsplash.com/photo-${id}?w=${w}&q=${q}&auto=format&fit=crop`;
+  id.startsWith("/")
+    ? id
+    : `https://images.unsplash.com/photo-${id}?w=${w}&q=${q}&auto=format&fit=crop`;
+
+export const OPUS_IMAGES = {
+  scene2BlackBlack: "/images/opus-1/opus-1-scene-2-black-black.jpg",
+  scene2WhiteWhite: "/images/opus-1/opus-1-scene-2-white-white.jpg",
+  scene4BlackWhite: "/images/opus-1/opus-1-scene-4-black-white.jpg",
+  scene4WhiteWhitePerspective: "/images/opus-1/opus-1-scene-4-white-white-perspective.jpg",
+  scene4WhiteWhite: "/images/opus-1/opus-1-scene-4-white-white.jpg",
+};
+
+export const REVIEW_IMAGES = {
+  naimUnitiNovaPe: "/images/reviews/naim-uniti-nova-pe.jpg",
+  regaPlanar8: "/images/reviews/rega-planar-8.jpg",
+  isoacousticsGaiaNeo: "/images/reviews/isoacoustics-gaia-neo.jpg",
+};
 
 export const BRAND = {
   name: "Signal & Soul",
   tagline: "The journal of high-fidelity listening",
   nav: [
-    { label: "Stories", href: "#stories" },
-    { label: "Reviews", href: "#reviews" },
-    { label: "Feature", href: "#feature" },
-    { label: "Gear", href: "#gear" },
+    { label: "Stories", href: "/#stories" },
+    { label: "Reviews", href: "/#reviews" },
+    { label: "Full Review", href: "/reviews/opus-1" },
+    { label: "Gear", href: "/#gear" },
   ],
 };
 
 export const HERO = {
-  kicker: "Issue 07 — The Analog Revival",
-  title: ["The room", "disappears.", "Only the music remains."],
+  kicker: "OPUS 1 — Real rooms, real scale",
+  title: ["OPUS 1", "turns the room", "into a stage."],
   lede:
-    "A quarterly for people who hear the difference. We chase the warmth of vinyl, the silence between notes, and the gear that gets out of the way.",
-  cta: { primary: "Read the issue", secondary: "Subscribe — it's free" },
-  image: "1505740420928-5e560c06d30e", // sculptural studio headphones
+    "A sculptural horn loudspeaker for interiors that need presence without visual noise. We listened to OPUS 1 in real spaces, with real light, at real living-room distance.",
+  cta: { primary: "Read the OPUS story", secondary: "Get updates" },
+  image: OPUS_IMAGES.scene4WhiteWhitePerspective,
+  alt: "OPUS 1 white loudspeaker in front of bright curtains",
+  imageLabel: "On test this issue",
+  imageMeta: "OPUS 1 / white-white",
 };
 
 export const STEPS = [
@@ -45,86 +65,180 @@ export const STEPS = [
 
 export const STORIES = [
   {
-    kicker: "Turntables",
-    title: "The 12-inch ritual that won't die",
-    excerpt: "Why a generation raised on streaming keeps coming back to the drop of a needle.",
-    image: "1493225457124-a3eb161ffa5f",
+    kicker: "OPUS Feature",
+    title: "OPUS 1 brings a sculptural horn into the living room",
+    excerpt: "A real-room listen with the white-white finish: calm surfaces, a focused stage, and enough physical scale to anchor the space.",
+    image: OPUS_IMAGES.scene4WhiteWhite,
+    alt: "Pair of white OPUS 1 loudspeakers beside a light sofa",
   },
   {
-    kicker: "Rooms",
-    title: "Acoustics for renters",
-    excerpt: "Four reversible fixes that tame a hard, bright room without a single screw in the wall.",
-    image: "1558537348-c0f8e733989d",
+    kicker: "Finish",
+    title: "Black-white when the room needs contrast",
+    excerpt: "The same horn geometry in a darker cabinet: more graphic, still quiet enough for a soft interior.",
+    image: OPUS_IMAGES.scene4BlackWhite,
+    alt: "Black and white OPUS 1 loudspeakers in a modern living room",
   },
   {
-    kicker: "Headphones",
-    title: "The case for closed-back",
-    excerpt: "Open-back gets the press. Here's why the sealed cup might be the more honest listen.",
-    image: "1546435770-a3e426bf472b",
+    kicker: "Perspective",
+    title: "The near-field view of a floorstanding horn",
+    excerpt: "Up close, OPUS 1 reads less like equipment and more like a deliberate piece of architecture.",
+    image: OPUS_IMAGES.scene4WhiteWhitePerspective,
+    alt: "Close perspective of a white OPUS 1 speaker near a window",
   },
   {
-    kicker: "Pressings",
-    title: "One album, five pressings",
-    excerpt: "We A/B'd the same record across five cuts. The cheapest won. Here's what that tells you.",
-    image: "1607853202273-797f1c22a38e",
+    kicker: "Setup",
+    title: "A single speaker, a quiet wall, a harder floor",
+    excerpt: "The hallway setup shows how the cabinet shape, horn and shadow behave outside the usual sofa scene.",
+    image: OPUS_IMAGES.scene2WhiteWhite,
+    alt: "White OPUS 1 loudspeaker on a reflective floor",
   },
 ];
 
-export const REVIEWS = [
+export type Review = {
+  slug: string;
+  name: string;
+  sub: string;
+  verdict: string;
+  rating: number;
+  href: string;
+  cta?: string;
+  image: string;
+  alt: string;
+  detailImage?: string;
+  detailAlt?: string;
+  seoTitle: string;
+  seoDescription: string;
+  body: string[];
+  quote?: string;
+  officialUrl?: string;
+  officialLabel?: string;
+};
+
+export const reviewPath = (slug: string) => `/reviews/${slug}`;
+
+const OPUS_REVIEW_BODY = [
+  "OPUS 1 starts with a difficult promise: make a horn loudspeaker that keeps its acoustic authority without turning the living room into a demo booth. In the white-white setup, the cabinet almost disappears into the light while the circular horn remains the visual anchor.",
+  "The proportions matter. The speaker is tall enough to hold the room, narrow enough to avoid feeling like furniture, and graphic enough to make the system look intentional from across the sofa. Nothing about the silhouette apologizes for being hi-fi.",
+  "The most convincing view is the one that looks least staged. A single OPUS 1 near a window shows the cabinet depth, the horn flare and the soft shadow it casts on the wall. It feels like a product built for rooms where sound and interior design have to share the same oxygen.",
+];
+
+const OPUS_REVIEW_QUOTE = "The horn stays visible, but the room stays calm.";
+
+export const REVIEWS: Review[] = [
   {
-    name: "Meridian-class headphones",
-    sub: "Reference, closed-back",
-    verdict: "Unflinching detail with a low end you can feel in your jaw.",
-    rating: 4.5,
-    image: "1583394838336-acd977736f90",
-  },
-  {
-    name: "The all-analog turntable",
-    sub: "Belt-drive, no compromise",
-    verdict: "Silent backgrounds and a soundstage that steps a foot past the speakers.",
+    slug: "opus-1",
+    name: "OPUS 1",
+    sub: "White-white floorstanding horn speaker",
+    verdict: "The calmest finish in the set, with the horn reading as a soft sculptural object rather than a technical flourish.",
     rating: 5,
-    image: "1545454675-3531b543be5d",
+    href: reviewPath("opus-1"),
+    cta: "Read review",
+    image: OPUS_IMAGES.scene4WhiteWhite,
+    alt: "White-white OPUS 1 pair in a bright listening room",
+    detailImage: OPUS_IMAGES.scene2WhiteWhite,
+    detailAlt: "White OPUS 1 speaker near a column on a reflective floor",
+    seoTitle: "OPUS 1 review: white-white horn speaker for real rooms",
+    seoDescription:
+      "OPUS 1 review in the white-white finish: a sculptural floorstanding horn speaker with calm visual presence and real-room scale.",
+    body: OPUS_REVIEW_BODY,
+    quote: OPUS_REVIEW_QUOTE,
   },
   {
-    name: "Studio-monitor bookshelves",
-    sub: "Near-field, two-way",
-    verdict: "Honest to a fault — they'll flatter a great mix and expose a bad one.",
-    rating: 4,
-    image: "1484704849700-f032a568e944",
+    slug: "naim-uniti-nova-pe",
+    name: "Naim Uniti Nova PE",
+    sub: "Streaming amplifier",
+    verdict: "A compact all-in-one partner with enough drive for a sculptural floorstander, keeping the rack visually quiet beside OPUS.",
+    rating: 4.8,
+    href: reviewPath("naim-uniti-nova-pe"),
+    cta: "Read review",
+    image: REVIEW_IMAGES.naimUnitiNovaPe,
+    alt: "Naim Uniti Nova PE streaming amplifier",
+    seoTitle: "Naim Uniti Nova PE review: a quiet system partner for OPUS 1",
+    seoDescription:
+      "Naim Uniti Nova PE review as an OPUS 1 companion: a compact streaming amplifier that keeps the room quiet while supplying source and power.",
+    body: [
+      "Naim Uniti Nova PE makes sense beside OPUS 1 because it removes the rack from the equation. It is a streaming amplifier, DAC and control center in one chassis, so the room can keep the loudspeakers as the only strong visual statement.",
+      "The match is about discipline rather than spectacle. OPUS has the sculptural mass; the Nova PE supplies power and source handling without asking for a wall of boxes, cables and shelves.",
+      "For listeners building a living-room system, that is the point: fewer decisions in the room, cleaner signal flow on the console, and a setup that feels deliberate from sofa distance.",
+    ],
+    quote: "One strong box is enough when the speakers already carry the room.",
+    officialUrl: "https://www.naimaudio.com/products/nova-power-edition",
+    officialLabel: "Open Naim product page",
+  },
+  {
+    slug: "rega-planar-8",
+    name: "Rega Planar 8",
+    sub: "Skeletal turntable",
+    verdict: "A low-mass analog source with the right kind of visual restraint: technical, deliberate, and not trying to compete with the speakers.",
+    rating: 4.7,
+    href: reviewPath("rega-planar-8"),
+    cta: "Read review",
+    image: REVIEW_IMAGES.regaPlanar8,
+    alt: "Rega Planar 8 turntable",
+    seoTitle: "Rega Planar 8 review: analog restraint beside OPUS 1",
+    seoDescription:
+      "Rega Planar 8 review for an OPUS 1 system: a skeletal turntable with low visual mass, focused analog playback, and room-friendly restraint.",
+    body: [
+      "Rega Planar 8 works next to OPUS rather than against it. Its skeletal plinth looks technical, but the footprint stays low and light, so the speakers keep the architectural role.",
+      "Sonically, the appeal is the focused analog front end: rhythm, simple setup, and a direct path from record to system without turning the cabinet or console into a shrine.",
+      "On a visual level it is one of the easier sources to place beside OPUS 1. The shape is recognizable, restrained, and honest about what it is.",
+    ],
+    quote: "It gives the system an analog center without stealing the room.",
+    officialUrl: "https://www.rega.co.uk/products/planar-8",
+    officialLabel: "Open Rega product page",
+  },
+  {
+    slug: "isoacoustics-gaia-neo",
+    name: "IsoAcoustics GAIA Neo",
+    sub: "Speaker isolation feet",
+    verdict: "The most practical companion here: it supports placement, floor contact, and focus without adding another visual object to the room.",
+    rating: 4.6,
+    href: reviewPath("isoacoustics-gaia-neo"),
+    cta: "Read review",
+    image: REVIEW_IMAGES.isoacousticsGaiaNeo,
+    alt: "IsoAcoustics GAIA Neo speaker isolation feet",
+    seoTitle: "IsoAcoustics GAIA Neo review: practical support for OPUS 1",
+    seoDescription:
+      "IsoAcoustics GAIA Neo review for OPUS 1 owners: discreet isolation feet for placement, floor contact, and focus in real listening rooms.",
+    body: [
+      "GAIA Neo is the least glamorous product in the list, which is exactly why it belongs here. It sits under the loudspeakers and works on floor contact, stability and isolation instead of adding another object to the room.",
+      "With OPUS 1, placement is part of the listening experience: the horn, cabinet height and room boundaries all matter. Good feet make small adjustments more repeatable and protect the visual calm of the setup.",
+      "The result is practical support for focus and furniture-friendly placement, especially in real rooms with wood, stone or mixed flooring.",
+    ],
+    quote: "The best accessory here is the one you stop noticing.",
+    officialUrl: "https://isoacoustics.com/home-audio-isolation-products/gaia-neo-series/",
+    officialLabel: "Open IsoAcoustics product page",
   },
 ];
+
+export const getReviewBySlug = (slug: string) =>
+  REVIEWS.find((review) => review.slug === slug);
 
 export const FEATURE = {
-  kicker: "The Long Read",
-  title: "In praise of the listening chair",
-  image: "1487215078519-e21cc028cb29",
-  body: [
-    "There is a chair in every serious listener's life. Not the best chair in the house — the right one. It sits at the apex of an invisible triangle, equidistant from two speakers that have been nudged into place over months of small, obsessive movements.",
-    "We have been told that fidelity is a number: a frequency response, a distortion figure, a signal-to-noise ratio. And those numbers matter. But they describe the gear, not the listening. The listening happens in the chair, in the dark, when the room falls away and the record does the thing a record does at its best — it stops sounding like a reproduction and starts sounding like a presence.",
-    "This issue is a defense of that presence. Of taking the time. Of the unfashionable idea that music rewards attention the way nothing else on a screen ever will.",
-  ],
-  quote:
-    "Hi-fi isn't about hearing more. It's about getting everything else out of the way.",
-  inline: "1524678606370-a47ad25cb82a",
+  kicker: "OPUS Feature",
+  title: "How OPUS 1 makes a horn speaker feel at home",
+  image: OPUS_IMAGES.scene4WhiteWhite,
+  alt: "White OPUS 1 loudspeakers in a bright living room",
+  body: OPUS_REVIEW_BODY,
+  quote: OPUS_REVIEW_QUOTE,
+  inline: OPUS_IMAGES.scene2WhiteWhite,
+  inlineAlt: "White OPUS 1 speaker near a column on a reflective floor",
 };
 
 export const SPOTLIGHT = {
-  kicker: "Sound of the Month",
-  title: "Side B, in the dark",
-  image: "1511671782779-c97d3d27a1d4",
-  body: "Our editors' pick for the month — a record engineered for the back half of the night. Dynamic, patient, and impossibly quiet between the notes. Play it loud, then play it quiet. It holds up both ways.",
-  meta: ["180g pressing", "Half-speed master", "Gatefold"],
+  kicker: "Finish of the Month",
+  title: "Black-black, with daylight on the horn",
+  image: OPUS_IMAGES.scene2BlackBlack,
+  alt: "Black-black OPUS 1 loudspeaker catching daylight in a quiet interior",
+  body: "The black-black finish gives OPUS 1 the strongest silhouette in the set. It turns the horn into a glossy shadow, catches daylight on the flare, and keeps the cabinet calm against pale architecture.",
+  meta: ["OPUS 1", "Black-black", "Living-room setup"],
 };
 
 export const GEAR = [
-  "1505740420928-5e560c06d30e",
-  "1493225457124-a3eb161ffa5f",
-  "1546435770-a3e426bf472b",
-  "1545454675-3531b543be5d",
-  "1607853202273-797f1c22a38e",
-  "1583394838336-acd977736f90",
-  "1481277542470-605612bd2d61",
-  "1558537348-c0f8e733989d",
+  OPUS_IMAGES.scene4WhiteWhite,
+  OPUS_IMAGES.scene4BlackWhite,
+  OPUS_IMAGES.scene4WhiteWhitePerspective,
+  OPUS_IMAGES.scene2WhiteWhite,
 ];
 
 export const PARTNERS = [

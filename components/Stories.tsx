@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { STORIES, img } from "@/lib/content";
 import { Reveal } from "@/components/ui/Reveal";
 import { Kicker } from "@/components/ui/bits";
@@ -13,20 +14,20 @@ export function Stories() {
           <Kicker>From the issue</Kicker>
           <h2 className="font-display mt-4 text-4xl font-semibold sm:text-5xl">Stories</h2>
         </div>
-        <a href="#feature" className="hidden shrink-0 text-sm font-semibold text-accent hover:underline sm:inline">
+        <Link href="/reviews/opus-1" className="hidden shrink-0 text-sm font-semibold text-accent hover:underline sm:inline">
           The full index →
-        </a>
+        </Link>
       </Reveal>
 
       <div className="grid gap-6 lg:grid-cols-2">
         {/* Lead */}
         <Reveal>
-          <a href="#feature" className="group block">
+          <Link href="/reviews/opus-1" className="group block">
             <div className="relative aspect-[16/11] overflow-hidden rounded-3xl border border-line/70 shadow-[0_30px_70px_-30px_rgba(20,17,15,0.4)]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={img(lead.image, 1200)}
-                alt={lead.title}
+                alt={lead.alt}
                 loading="lazy"
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
@@ -38,19 +39,19 @@ export function Stories() {
               </h3>
               <p className="mt-2 max-w-xl text-ink-soft">{lead.excerpt}</p>
             </div>
-          </a>
+          </Link>
         </Reveal>
 
         {/* Column of three */}
         <div className="flex flex-col gap-6">
           {rest.map((s, i) => (
             <Reveal key={s.title} delay={i * 0.06}>
-              <a href="#feature" className="group flex gap-5">
+              <Link href="/reviews/opus-1" className="group flex gap-5">
                 <div className="relative aspect-square w-28 shrink-0 overflow-hidden rounded-2xl border border-line/70 sm:w-36">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={img(s.image, 500)}
-                    alt={s.title}
+                    alt={s.alt}
                     loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
@@ -65,7 +66,7 @@ export function Stories() {
                     Read <ArrowUpRight className="h-3.5 w-3.5" />
                   </span>
                 </div>
-              </a>
+              </Link>
             </Reveal>
           ))}
         </div>

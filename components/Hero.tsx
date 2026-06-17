@@ -27,9 +27,9 @@ export function Hero() {
             <Kicker>{HERO.kicker}</Kicker>
           </div>
 
-          <h1 className="font-display mt-5 text-[clamp(2.8rem,8vw,6.5rem)] font-semibold leading-[0.96]">
+          <h1 className="font-display mt-5 text-[clamp(2.8rem,8vw,6.5rem)] font-semibold leading-[1.04]">
             {HERO.title.map((line, i) => (
-              <span key={i} className="block overflow-hidden">
+              <span key={i} className="block overflow-hidden pb-[0.12em] -mb-[0.12em]">
                 <span className="reveal-line" style={{ animationDelay: `${0.1 + i * 0.09}s` }}>
                   {i === HERO.title.length - 1 ? (
                     <span className="italic text-accent">{line}</span>
@@ -73,14 +73,14 @@ export function Hero() {
           <div className="reveal relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-line/70 shadow-[0_50px_90px_-30px_rgba(20,17,15,0.5)]">
             <motion.img
               src={img(HERO.image, 1100)}
-              alt="A pair of reference studio headphones"
+              alt={HERO.alt}
               style={{ y, scale }}
               className="absolute inset-0 h-[115%] w-full object-cover"
             />
             <div className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-3 bg-gradient-to-t from-night/70 to-transparent p-5 text-white">
-              <span className="font-display text-sm italic">On test this issue</span>
+              <span className="font-display text-sm italic">{HERO.imageLabel}</span>
               <span className="text-xs font-medium uppercase tracking-widest text-white/70">
-                Reference / closed-back
+                {HERO.imageMeta}
               </span>
             </div>
           </div>

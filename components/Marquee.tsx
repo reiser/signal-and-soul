@@ -5,10 +5,7 @@ import { PARTNERS } from "@/lib/content";
 export function Marquee() {
   const row = [...PARTNERS, ...PARTNERS];
   return (
-    <div className="border-y border-line/70 py-7">
-      <p className="mb-5 text-center text-xs font-medium uppercase tracking-[0.25em] text-ink-soft/70">
-        Heard in the listening rooms of
-      </p>
+    <div className="border-y border-line/70 py-6">
       <div className="marquee-mask overflow-hidden">
         <div className="animate-marquee flex w-max items-center gap-14 pr-14">
           {row.map((name, i) => (

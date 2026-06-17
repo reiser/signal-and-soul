@@ -1,8 +1,7 @@
 import { SPOTLIGHT, img } from "@/lib/content";
 import { Reveal } from "@/components/ui/Reveal";
 
-// Sound of the Month — a dark, cinematic spotlight on one record. The accent
-// glows; the image sits in a soft-shadowed frame.
+// Spotlight — a dark, cinematic feature frame for the current OPUS setup.
 export function Spotlight() {
   return (
     <section className="relative overflow-hidden bg-night text-paper">
@@ -39,13 +38,13 @@ export function Spotlight() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={img(SPOTLIGHT.image, 900)}
-              alt="The record of the month"
+              alt={SPOTLIGHT.alt}
               loading="lazy"
               className="h-full w-full object-cover"
             />
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent p-6">
               <span className="font-display text-sm italic text-paper/90">
-                Editors&rsquo; pick · Issue 07
+                OPUS 1 · Real-room setup
               </span>
             </div>
           </div>
