@@ -1,26 +1,89 @@
 @import "tailwindcss";
 
+/* Signal & Soul — design tokens (Tailwind v4 CSS-first config). One warm accent
+   over a neutral ink/paper palette; a serif display for editorial headlines and
+   a clean sans for body. Fonts are injected as CSS vars by next/font in layout. */
+@theme {
+  --color-paper: #f6f3ee;
+  --color-ink: #14110f;
+  --color-ink-soft: #4b443d;
+  --color-line: #e3ddd3;
+  --color-accent: #c8531b; /* burnt amber — the "warm" of analog */
+  --color-accent-soft: #e8a06a;
+  --color-night: #0d0c0b;
+
+  --font-display: var(--font-serif), Georgia, serif;
+  --font-sans: var(--font-grotesk), ui-sans-serif, system-ui, sans-serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: var(--color-paper);
+  --foreground: var(--color-ink);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  border-color: var(--color-line);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+/* Editorial display type — tight, large, confident. */
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+/* Infinite logo / gear marquee. Duplicate the track in markup; translate -50%. */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee var(--marquee-duration, 38s) linear infinite;
+}
+.marquee-mask {
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+}
+
+/* Scroll/entrance reveals — CSS-driven so content is ALWAYS visible (never
+   trapped behind a JS animation that might not run in a given runtime). Plays on
+   load; `both` holds the final (visible) state. The .reveal-line variant rises
+   from below a clipped (overflow-hidden) parent for the editorial headline. */
+@keyframes ssReveal {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes ssLineUp {
+  from { transform: translateY(110%); }
+  to   { transform: translateY(0); }
+}
+.reveal {
+  animation: ssReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.reveal-line {
+  display: block;
+  animation: ssLineUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .animate-marquee,
+  .reveal,
+  .reveal-line { animation: none; }
 }

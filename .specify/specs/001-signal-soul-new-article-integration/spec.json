@@ -1,0 +1,42 @@
+{
+  "slug": "001-signal-soul-new-article-integration",
+  "title": "Signal & Soul - New Article Integration",
+  "status": "implemented",
+  "awaiting": "",
+  "requirements": [
+    "Connect to the remote repository and checkout the magazine-signal-and-soul branch as new-article",
+    "Add exactly one new high-fidelity audio article to the STORIES array in lib/content.ts",
+    "Commit and push the new branch to GitHub"
+  ],
+  "acceptance": [
+    {
+      "text": "Git repository connected to git@github.com:reiser/signal-and-soul.git",
+      "done": true
+    },
+    {
+      "text": "Checked out to new-article branch with magazine-signal-and-soul content",
+      "done": true
+    },
+    {
+      "text": "One new high-fidelity audio article added to STORIES array in lib/content.ts",
+      "done": true
+    },
+    {
+      "text": "Changes committed and pushed to origin new-article branch",
+      "done": true
+    }
+  ],
+  "plan": [
+    "Connect to the GitHub repository using connect_git",
+    "Fetch origin, checkout new-article branch, and install dependencies",
+    "Read lib/content.ts to understand the STORIES array structure",
+    "Append one new high-fidelity audio article to the STORIES array",
+    "Commit the changes and push to the new-article branch"
+  ],
+  "outOfScope": [],
+  "evidence": [
+    "#1 #2 #3 #4: Successfully connected git, checked out new-article branch, added the article to lib/content.ts, committed, and pushed to origin."
+  ],
+  "createdAt": "2026-06-14T04:07:28.341Z",
+  "updatedAt": "2026-06-14T04:08:28.340Z"
+}
