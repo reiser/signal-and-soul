@@ -44,11 +44,11 @@ export function Navbar() {
             href="#subscribe"
             className="hidden rounded-full bg-ink px-4 py-2 text-sm font-semibold text-paper transition-transform hover:-translate-y-0.5 sm:inline-block"
           >
-            Abonnieren
+            Subscribe
           </a>
           <button
             type="button"
-            aria-label="Menü"
+            aria-label="Menu"
             onClick={() => setOpen((v) => !v)}
             className="grid h-10 w-10 place-items-center rounded-full border border-line md:hidden"
           >

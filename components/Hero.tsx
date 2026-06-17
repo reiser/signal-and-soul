@@ -73,14 +73,14 @@ export function Hero() {
           <div className="reveal relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-line/70 shadow-[0_50px_90px_-30px_rgba(20,17,15,0.5)]">
             <motion.img
               src={img(HERO.image, 1100)}
-              alt="Ein Paar geschlossene Referenz-Studiokopfhörer"
+              alt="A pair of closed-back reference studio headphones"
               style={{ y, scale }}
               className="absolute inset-0 h-[115%] w-full object-cover"
             />
             <div className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-3 bg-gradient-to-t from-night/70 to-transparent p-5 text-white">
-              <span className="font-display text-sm italic">Im Test dieser Ausgabe</span>
+              <span className="font-display text-sm italic">In this issue</span>
               <span className="text-xs font-medium uppercase tracking-widest text-white/70">
-                Referenz / geschlossen
+                Reference / closed-back
               </span>
             </div>
           </div>

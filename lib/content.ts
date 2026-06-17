@@ -1,80 +1,50 @@
-// Signal & Soul — redaktionelle Inhalte des Magazins. Datengetrieben, sodass
-// jeder Bereich aus einer einzigen Quelle rendert (Atomic Design: Inhalte sind
-// die Datenschicht). Alle Bilder sind echte Unsplash-Fotos (verifiziert 200),
-// in der Größe angepasst über URL-Query-Parameter.
+// Signal & Soul — editorial content of the magazine. Data-driven so every
+// section renders from a single source (atomic design: content is the data
+// layer). All images are real Unsplash photos (verified 200), resized via URL
+// query parameters.
 
 export const img = (id: string, w = 1200, q = 80) =>
   `https://images.unsplash.com/photo-${id}?w=${w}&q=${q}&auto=format&fit=crop`;
 
 export const BRAND = {
   name: "Signal & Soul",
-  tagline: "Das Journal für hochwertiges Hören",
+  tagline: "A magazine for people who hear the difference",
   nav: [
-    { label: "Geschichten", href: "#stories" },
-    { label: "Tests", href: "#reviews" },
-    { label: "Reportage", href: "#feature" },
-    { label: "Geräte", href: "#gear" },
+    { label: "Stories", href: "#stories" },
+    { label: "Reviews", href: "#reviews" },
+    { label: "Long Read", href: "#feature" },
+    { label: "Gear", href: "#gear" },
   ],
 };
 
 export const HERO = {
-  kicker: "Ausgabe 07 — Die Rückkehr des Analogen",
-  title: ["Der Raum", "verschwindet.", "Nur die Musik bleibt."],
+  kicker: "News from the world of listening",
+  title: ["The room", "disappears.", "Only the music remains."],
   lede:
-    "Ein Quartalsmagazin für Menschen, die den Unterschied hören. Wir jagen die Wärme der Schallplatte, die Stille zwischen den Tönen und die Geräte, die sich im Weg stehen.",
-  cta: { primary: "Ausgabe lesen", secondary: "Abonnieren — ist kostenlos" },
-  image: "1505740420928-5e560c06d30e", // skulpturale Studio-Kopfhörer
+    "Signal & Soul is an independent magazine for people who hear the difference. We follow the warmth of the record, the silence between the notes and the gear that quietly gets out of the way.",
+  cta: { primary: "Read the magazine", secondary: "Subscribe — it's free" },
+  image: "1505740420928-5e560c06d30e", // sculptured studio headphones
 };
 
 export const STEPS = [
   {
     n: "01",
-    title: "Tiefer hören",
-    body: "Langformat-Tests aus einem behandelten Raum, nicht aus dem Datenblatt. Wir leben eine Woche mit einer Platte, bevor wir ein Wort schreiben.",
+    title: "Listen longer",
+    body: "Long-form tests out of a treated room, not off a spec sheet. We live with a record for a week before we write a word.",
   },
   {
     n: "02",
-    title: "Dem Ohr vertrauen",
-    body: "Messwerte zählen, aber die letzten zehn Prozent fühlt man. Unsere Urteile entstehen in Stunden, nicht in Minuten.",
+    title: "Trust the ear",
+    body: "Measurements matter, but the last ten percent is felt, not measured. Our verdicts are earned in hours, not minutes.",
   },
   {
     n: "03",
-    title: "Die Anlage bauen",
-    body: "Quelle, Verstärker, Raum, Platte. Wir helfen dir, dort zu investieren, wo du tatsächlich etwas hörst — und das zu überspringen, was du nicht hörst.",
+    title: "Build the system",
+    body: "Source, amplifier, room, record. We help you invest where you'll actually hear it — and skip the parts you won't.",
   },
 ];
 
 export const STORIES = [
-  {
-    kicker: "Plattenspieler",
-    title: "Das Ritual mit den zwölf Zoll, das nicht sterben will",
-    excerpt: "Warum eine Streaming-Generation immer wieder zur Nadel zurückkehrt.",
-    image: "1493225457124-a3eb161ffa5f",
-  },
-  {
-    kicker: "Räume",
-    title: "Raumakustik für Mieter",
-    excerpt: "Vier reversible Tricks, die einen harten, hellen Raum zähmen — ohne eine einzige Schraube in der Wand.",
-    image: "1558537348-c0f8e733989d",
-  },
-  {
-    kicker: "Kopfhörer",
-    title: "Das Plädoyer für den geschlossenen Hörer",
-    excerpt: "Offen klingt im Ruf besser. Warum die geschlossene Kapsel ehrlicher sein kann.",
-    image: "1546435770-a3e426bf472b",
-  },
-  {
-    kicker: "Verstärker",
-    title: "Das warme Glühen des Glases",
-    excerpt: "Warum Röhrenverstärker noch immer den Schlüssel zum lebensechtesten Mittentonbereich besitzen.",
-    image: "1481277542470-605612bd2d61",
-  },
-  {
-    kicker: "Band",
-    title: "Die stille Renaissance der Tonbandmaschine",
-    excerpt: "Eine kleine Werkstatt in Berlin liefert wieder Viertelzollgeräte. Wir lebten einen Monat mit einem — und mit der einen Platte, die das Argument endgültig machte.",
-    image: "1571974599782-87624638275e",
-  },
   {
     kicker: "Amplifiers",
     title: "In defense of the glowing bottle",
@@ -104,55 +74,35 @@ export const STORIES = [
 
 export const REVIEWS = [
   {
-    name: "Kopfhörer der Meridian-Klasse",
-    sub: "Referenz, geschlossen",
-    verdict: "Kompromissloses Detail und ein Tiefton, den man im Kiefer spürt.",
-    rating: 4.5,
-    image: "1583394838336-acd977736f90",
-  },
-  {
-    name: "Der rein analoge Plattenspieler",
-    sub: "Riemenantrieb, ohne Kompromiss",
-    verdict: "Stille Hintergründe und eine Bühne, die einen Fuß über die Lautsprecher hinausreicht.",
-    rating: 5,
-    image: "1545454675-3531b543be5d",
-  },
-  {
-    name: "Studiomonitor-Regallautsprecher",
-    sub: "Nahfeld, zwei Wege",
-    verdict: "Ehrlich bis an die Schmerzgrenze — sie schmeicheln einer guten Mischung und entlarven eine schlechte.",
-    rating: 4,
-    image: "1484704849700-f032a568e944",
-  },
-  {
-    name: "Der Porzellan-Elefant",
-    sub: "Hörraum-Objekt, manuell glasiert",
-    verdict: "Kein Lautsprecher, kein Kabel, kein Messwert — und trotzdem verändert er den Raum. Eine Lanze für die kleine, schwere Figur, die zwischen den Boxen steht und den ersten Reflexionen den Schrecken nimmt.",
+    name: "The Porcelain Elephant",
+    sub: "Listening-room object, hand-glazed",
+    verdict:
+      "Not a speaker, not a cable, not a spec sheet — and yet it changes the room. A case for the small, heavy figure that sits between the speakers and takes the sting out of the first reflections.",
     rating: 4.5,
     image: "1576020799627-aeac74d58064",
   },
 ];
 
 export const FEATURE = {
-  kicker: "Die lange Reportage",
-  title: "Eine Liebeserklärung an den Hörsessel",
+  kicker: "The Long Read",
+  title: "A love letter to the listening chair",
   image: "1487215078519-e21cc028cb29",
   body: [
-    "Es gibt einen Sessel im Leben jedes ernsthaften Hörers. Nicht der beste Sessel im Haus — der richtige. Er steht an der Spitze eines unsichtbaren Dreiecks, gleich weit entfernt von zwei Lautsprechern, die über Monate winziger, besessener Bewegungen in ihre Position geschoben wurden.",
-    "Man hat uns erzählt, Wiedergabetreue sei eine Zahl: ein Frequenzgang, ein Klirrfaktor, ein Signal-Rausch-Abstand. Und diese Zahlen zählen. Doch sie beschreiben das Gerät, nicht das Hören. Das Hören geschieht im Sessel, im Dunkeln, wenn der Raum verschwindet und die Platte das tut, was eine Platte im besten Fall tut — sie hört auf, wie eine Reproduktion zu klingen, und beginnt, wie eine Gegenwart zu klingen.",
-    "Diese Ausgabe ist eine Verteidigung dieser Gegenwart. Der Zeit, die man sich nimmt. Der unmodernen Idee, dass Musik Aufmerksamkeit belohnt, wie nichts sonst auf einem Bildschirm es je tun wird.",
+    "There is a chair in the life of every serious listener. Not the best chair in the house — the right one. It sits at the apex of an invisible triangle, equidistant from two speakers that have been nudged, over months of small, obsessive movements, into exactly where they need to be.",
+    "We have been told that fidelity is a number: a frequency response, a distortion figure, a signal-to-noise ratio. Those numbers count. But they describe the equipment, not the listening. The listening happens in the chair, in the dark, when the room disappears and the record does what a record does at its best — it stops sounding like a reproduction and starts sounding like a presence.",
+    "This piece is a defence of that presence. Of the time you give it. Of the unfashionable idea that music rewards attention the way nothing else on a screen ever will.",
   ],
   quote:
-    "Hi-Fi bedeutet nicht, mehr zu hören. Es bedeutet, alles andere aus dem Weg zu räumen.",
+    "Hi-Fi doesn't mean hearing more. It means getting everything else out of the way.",
   inline: "1524678606370-a47ad25cb82a",
 };
 
 export const SPOTLIGHT = {
-  kicker: "Klang des Monats",
-  title: "Seite B, im Dunkeln",
+  kicker: "Sound of the Month",
+  title: "Side B, in the dark",
   image: "1511671782779-c97d3d27a1d4",
-  body: "Die Wahl der Redaktion für diesen Monat — eine Platte, konstruiert für die hintere Hälfte der Nacht. Dynamisch, geduldig und unerhört leise zwischen den Tönen. Spiel sie laut, dann spiel sie leise. Sie hält beides aus.",
-  meta: ["180g Pressung", "Halbgeschwindigkeits-Master", "Gatefold-Cover"],
+  body: "The editors' pick for this month — a record made for the back half of the night. Dynamic, patient, and unusually quiet between the notes. Play it loud, then play it quiet. It holds up to both.",
+  meta: ["180g pressing", "Half-speed master", "Gatefold sleeve"],
 };
 
 export const GEAR = [
@@ -169,8 +119,8 @@ export const GEAR = [
 export const PARTNERS = [
   "ABBEY ROAD",
   "ELYSIAN AUDIO",
-  "NORDISCHES VINYL",
-  "DER HÖRRAUM",
+  "NORDIC VINYL",
+  "THE LISTENING ROOM",
   "VERTERE",
   "OCTAVE LABS",
 ];
@@ -180,13 +130,13 @@ export const PARTNERS = [
 // press coverage of the Avantgarde Acoustic OPUS 1 — the company's flagship
 // three-way horn loudspeaker, hand-built in Germany.
 export const OPUS_ONE = {
-  kicker: "Field Report · Issue 07",
+  kicker: "Field Report",
   brand: "Avantgarde Acoustic",
   title: "The OPUS 1: a horn speaker that asks the room a question",
   standfirst:
     "Avantgarde Acoustic's flagship is a 1.7-metre, three-way horn system that trades watts for efficiency. We spent an evening with a pair — and with the room that has to grow up around them.",
-  cover: "https://picsum.photos/seed/horn-loudspeaker-hi-fi-audio-avantgarde--1/1600/900",
-  inline: "https://picsum.photos/seed/horn-loudspeaker-hi-fi-audio-avantgarde--2/1600/900",
+  cover: img("1505740420928-5e560c06d30e", 1600),   // sculptured studio headphones — verified 200
+  inline: img("1487215078519-e21cc028cb29", 1600),   // listening-room portrait — verified 200
   source: {
     label: "Avantgarde Acoustic",
     href: "https://avantgarde-acoustic.de/",
@@ -212,8 +162,8 @@ export const OPUS_ONE = {
 
 export const FAQ_FOOTER = {
   columns: [
-    { title: "Magazin", links: ["Aktuelle Ausgabe", "Archiv", "Tests", "Die lange Reportage"] },
-    { title: "Hören", links: ["Kaufberatung", "Raumaufstellung", "Pressungsnotizen", "Glossar"] },
-    { title: "Über uns", links: ["Masthead", "So testen wir", "Kontakt", "Ethik"] },
+    { title: "Magazine", links: ["Latest", "Archive", "Reviews", "The Long Read"] },
+    { title: "Listen", links: ["Buying guide", "Room setup", "Pressing notes", "Glossary"] },
+    { title: "About", links: ["Masthead", "How we test", "Contact", "Ethics"] },
   ],
 };

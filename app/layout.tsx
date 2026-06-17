@@ -18,16 +18,16 @@ const grotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Signal & Soul — Das Journal für hochwertiges Hören",
+  title: "Signal & Soul — A magazine for people who hear the difference",
   description:
-    "Ein Quartalsmagazin für Menschen, die den Unterschied hören. Langformat-Tests, Raumkunst und die Rückkehr des Analogen.",
+    "Long-form tests, listening reports and the slow return of analogue. Signal & Soul is an independent magazine for people who hear the difference.",
 };
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="de" className={`${serif.variable} ${grotesk.variable} h-full`}>
+    <html lang="en" className={`${serif.variable} ${grotesk.variable} h-full`}>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );

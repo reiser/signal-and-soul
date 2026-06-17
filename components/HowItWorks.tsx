@@ -7,9 +7,9 @@ export function HowItWorks() {
   return (
     <section className="mx-auto max-w-7xl px-5 py-24 sm:px-8 sm:py-32">
       <Reveal>
-        <Kicker>Wie wir hören</Kicker>
+        <Kicker>How we listen</Kicker>
         <h2 className="font-display mt-4 max-w-2xl text-4xl font-semibold leading-tight sm:text-5xl">
-          Ein Magazin, kein Datenblatt.
+          A magazine, not a spec sheet.
         </h2>
       </Reveal>
 

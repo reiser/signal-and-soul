@@ -8,9 +8,9 @@ export function GearGallery() {
   return (
     <section id="gear" className="py-24 sm:py-32">
       <Reveal className="mx-auto mb-12 max-w-7xl px-5 sm:px-8">
-        <Kicker>Die Objekte</Kicker>
+        <Kicker>The objects</Kicker>
         <h2 className="font-display mt-4 text-4xl font-semibold sm:text-5xl">
-          Geräte, mit denen wir leben würden.
+          Gear we'd actually live with.
         </h2>
       </Reveal>
 
@@ -24,7 +24,7 @@ export function GearGallery() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={img(id, 700)}
-                alt="Audiogerät"
+                alt="Hi-fi equipment"
                 loading="lazy"
                 className="h-full w-full object-cover"
               />

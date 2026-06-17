@@ -45,7 +45,7 @@ export function Spotlight() {
             />
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent p-6">
               <span className="font-display text-sm italic text-paper/90">
-                Wahl der Redaktion · Ausgabe 07
+                Editors' pick
               </span>
             </div>
           </div>
