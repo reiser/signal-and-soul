@@ -10,11 +10,11 @@ export function Stories() {
     <section id="stories" className="mx-auto max-w-7xl px-5 py-12 sm:px-8">
       <Reveal className="mb-10 flex items-end justify-between gap-6">
         <div>
-          <Kicker>From the issue</Kicker>
-          <h2 className="font-display mt-4 text-4xl font-semibold sm:text-5xl">Stories</h2>
+          <Kicker>Aus dieser Ausgabe</Kicker>
+          <h2 className="font-display mt-4 text-4xl font-semibold sm:text-5xl">Geschichten</h2>
         </div>
         <a href="#feature" className="hidden shrink-0 text-sm font-semibold text-accent hover:underline sm:inline">
-          The full index →
+          Das vollständige Inhaltsverzeichnis →
         </a>
       </Reveal>
 
@@ -62,7 +62,7 @@ export function Stories() {
                   </h3>
                   <p className="mt-1.5 line-clamp-2 text-sm text-ink-soft">{s.excerpt}</p>
                   <span className="mt-2 inline-flex items-center gap-1 text-sm font-semibold text-accent opacity-0 transition-opacity group-hover:opacity-100">
-                    Read <ArrowUpRight className="h-3.5 w-3.5" />
+                    Lesen <ArrowUpRight className="h-3.5 w-3.5" />
                   </span>
                 </div>
               </a>

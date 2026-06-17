@@ -1,72 +1,98 @@
-// Signal & Soul — editorial content for the magazine. Data-driven so every
-// section renders from one source (Atomic Design: content is the data layer).
-// All imagery is real Unsplash (verified 200), sized via the URL query params.
+// Signal & Soul — redaktionelle Inhalte des Magazins. Datengetrieben, sodass
+// jeder Bereich aus einer einzigen Quelle rendert (Atomic Design: Inhalte sind
+// die Datenschicht). Alle Bilder sind echte Unsplash-Fotos (verifiziert 200),
+// in der Größe angepasst über URL-Query-Parameter.
 
 export const img = (id: string, w = 1200, q = 80) =>
   `https://images.unsplash.com/photo-${id}?w=${w}&q=${q}&auto=format&fit=crop`;
 
 export const BRAND = {
   name: "Signal & Soul",
-  tagline: "The journal of high-fidelity listening",
+  tagline: "Das Journal für hochwertiges Hören",
   nav: [
-    { label: "Stories", href: "#stories" },
-    { label: "Reviews", href: "#reviews" },
-    { label: "Feature", href: "#feature" },
-    { label: "Gear", href: "#gear" },
+    { label: "Geschichten", href: "#stories" },
+    { label: "Tests", href: "#reviews" },
+    { label: "Reportage", href: "#feature" },
+    { label: "Geräte", href: "#gear" },
   ],
 };
 
 export const HERO = {
-  kicker: "Issue 07 — The Analog Revival",
-  title: ["The room", "disappears.", "Only the music remains."],
+  kicker: "Ausgabe 07 — Die Rückkehr des Analogen",
+  title: ["Der Raum", "verschwindet.", "Nur die Musik bleibt."],
   lede:
-    "A quarterly for people who hear the difference. We chase the warmth of vinyl, the silence between notes, and the gear that gets out of the way.",
-  cta: { primary: "Read the issue", secondary: "Subscribe — it's free" },
-  image: "1505740420928-5e560c06d30e", // sculptural studio headphones
+    "Ein Quartalsmagazin für Menschen, die den Unterschied hören. Wir jagen die Wärme der Schallplatte, die Stille zwischen den Tönen und die Geräte, die sich im Weg stehen.",
+  cta: { primary: "Ausgabe lesen", secondary: "Abonnieren — ist kostenlos" },
+  image: "1505740420928-5e560c06d30e", // skulpturale Studio-Kopfhörer
 };
 
 export const STEPS = [
   {
     n: "01",
-    title: "Listen deeper",
-    body: "Long-form reviews from a treated room, not a spec sheet. We sit with a record for a week before we write a word.",
+    title: "Tiefer hören",
+    body: "Langformat-Tests aus einem behandelten Raum, nicht aus dem Datenblatt. Wir leben eine Woche mit einer Platte, bevor wir ein Wort schreiben.",
   },
   {
     n: "02",
-    title: "Trust the ear",
-    body: "Measurements matter, but the last 10% is felt. Our verdicts come from hours, not minutes.",
+    title: "Dem Ohr vertrauen",
+    body: "Messwerte zählen, aber die letzten zehn Prozent fühlt man. Unsere Urteile entstehen in Stunden, nicht in Minuten.",
   },
   {
     n: "03",
-    title: "Build the system",
-    body: "Source, amp, room, record. We help you spend on what you'll actually hear — and skip what you won't.",
+    title: "Die Anlage bauen",
+    body: "Quelle, Verstärker, Raum, Platte. Wir helfen dir, dort zu investieren, wo du tatsächlich etwas hörst — und das zu überspringen, was du nicht hörst.",
   },
 ];
 
 export const STORIES = [
   {
-    kicker: "Turntables",
-    title: "The 12-inch ritual that won't die",
-    excerpt: "Why a generation raised on streaming keeps coming back to the drop of a needle.",
+    kicker: "Plattenspieler",
+    title: "Das Ritual mit den zwölf Zoll, das nicht sterben will",
+    excerpt: "Warum eine Streaming-Generation immer wieder zur Nadel zurückkehrt.",
     image: "1493225457124-a3eb161ffa5f",
   },
   {
-    kicker: "Rooms",
-    title: "Acoustics for renters",
-    excerpt: "Four reversible fixes that tame a hard, bright room without a single screw in the wall.",
+    kicker: "Räume",
+    title: "Raumakustik für Mieter",
+    excerpt: "Vier reversible Tricks, die einen harten, hellen Raum zähmen — ohne eine einzige Schraube in der Wand.",
     image: "1558537348-c0f8e733989d",
   },
   {
-    kicker: "Headphones",
-    title: "The case for closed-back",
-    excerpt: "Open-back gets the press. Here's why the sealed cup might be the more honest listen.",
+    kicker: "Kopfhörer",
+    title: "Das Plädoyer für den geschlossenen Hörer",
+    excerpt: "Offen klingt im Ruf besser. Warum die geschlossene Kapsel ehrlicher sein kann.",
     image: "1546435770-a3e426bf472b",
   },
   {
-    kicker: "Pressings",
-    title: "One album, five pressings",
-    excerpt: "We A/B'd the same record across five cuts. The cheapest won. Here's what that tells you.",
-    image: "1607853202273-797f1c22a38e",
+    kicker: "Verstärker",
+    title: "Das warme Glühen des Glases",
+    excerpt: "Warum Röhrenverstärker noch immer den Schlüssel zum lebensechtesten Mittentonbereich besitzen.",
+    image: "1481277542470-605612bd2d61",
+  },
+  {
+    kicker: "Band",
+    title: "Die stille Renaissance der Tonbandmaschine",
+    excerpt: "Eine kleine Werkstatt in Berlin liefert wieder Viertelzollgeräte. Wir lebten einen Monat mit einem — und mit der einen Platte, die das Argument endgültig machte.",
+    image: "1571974599782-87624638275e",
+  },
+  {
+    kicker: "Amplifiers",
+    title: "In defense of the glowing bottle",
+    excerpt: "A tube amp distorts everything — and somehow gets the voice more right than anything solid-state has ever managed.",
+    image: "1551817958-d9d86fb29431",
+  },
+  {
+    kicker: "The Argument for Glow",
+    title: "Why the tube amp refuses to die",
+    excerpt:
+      "Every decade we are told the valve is finished. Every decade it comes back, a little warmer, a little smugger. A field report from the third renaissance of the glow — and the case for harmonic distortion as a feature, not a flaw.",
+    image: "1564186763535-ebb21ef5277f",
+  },
+  {
+    kicker: "Amplifiers",
+    title: "The quiet art of the first watt",
+    excerpt: "Why the best amps aren't the loudest — and what a single honest watt, well spent, does to a small room at midnight.",
+    image: "1525362081669-2b476bb628c3",
   },
   {
     kicker: "Cartridges",
@@ -78,48 +104,48 @@ export const STORIES = [
 
 export const REVIEWS = [
   {
-    name: "Meridian-class headphones",
-    sub: "Reference, closed-back",
-    verdict: "Unflinching detail with a low end you can feel in your jaw.",
+    name: "Kopfhörer der Meridian-Klasse",
+    sub: "Referenz, geschlossen",
+    verdict: "Kompromissloses Detail und ein Tiefton, den man im Kiefer spürt.",
     rating: 4.5,
     image: "1583394838336-acd977736f90",
   },
   {
-    name: "The all-analog turntable",
-    sub: "Belt-drive, no compromise",
-    verdict: "Silent backgrounds and a soundstage that steps a foot past the speakers.",
+    name: "Der rein analoge Plattenspieler",
+    sub: "Riemenantrieb, ohne Kompromiss",
+    verdict: "Stille Hintergründe und eine Bühne, die einen Fuß über die Lautsprecher hinausreicht.",
     rating: 5,
     image: "1545454675-3531b543be5d",
   },
   {
-    name: "Studio-monitor bookshelves",
-    sub: "Near-field, two-way",
-    verdict: "Honest to a fault — they'll flatter a great mix and expose a bad one.",
+    name: "Studiomonitor-Regallautsprecher",
+    sub: "Nahfeld, zwei Wege",
+    verdict: "Ehrlich bis an die Schmerzgrenze — sie schmeicheln einer guten Mischung und entlarven eine schlechte.",
     rating: 4,
     image: "1484704849700-f032a568e944",
   },
 ];
 
 export const FEATURE = {
-  kicker: "The Long Read",
-  title: "In praise of the listening chair",
+  kicker: "Die lange Reportage",
+  title: "Eine Liebeserklärung an den Hörsessel",
   image: "1487215078519-e21cc028cb29",
   body: [
-    "There is a chair in every serious listener's life. Not the best chair in the house — the right one. It sits at the apex of an invisible triangle, equidistant from two speakers that have been nudged into place over months of small, obsessive movements.",
-    "We have been told that fidelity is a number: a frequency response, a distortion figure, a signal-to-noise ratio. And those numbers matter. But they describe the gear, not the listening. The listening happens in the chair, in the dark, when the room falls away and the record does the thing a record does at its best — it stops sounding like a reproduction and starts sounding like a presence.",
-    "This issue is a defense of that presence. Of taking the time. Of the unfashionable idea that music rewards attention the way nothing else on a screen ever will.",
+    "Es gibt einen Sessel im Leben jedes ernsthaften Hörers. Nicht der beste Sessel im Haus — der richtige. Er steht an der Spitze eines unsichtbaren Dreiecks, gleich weit entfernt von zwei Lautsprechern, die über Monate winziger, besessener Bewegungen in ihre Position geschoben wurden.",
+    "Man hat uns erzählt, Wiedergabetreue sei eine Zahl: ein Frequenzgang, ein Klirrfaktor, ein Signal-Rausch-Abstand. Und diese Zahlen zählen. Doch sie beschreiben das Gerät, nicht das Hören. Das Hören geschieht im Sessel, im Dunkeln, wenn der Raum verschwindet und die Platte das tut, was eine Platte im besten Fall tut — sie hört auf, wie eine Reproduktion zu klingen, und beginnt, wie eine Gegenwart zu klingen.",
+    "Diese Ausgabe ist eine Verteidigung dieser Gegenwart. Der Zeit, die man sich nimmt. Der unmodernen Idee, dass Musik Aufmerksamkeit belohnt, wie nichts sonst auf einem Bildschirm es je tun wird.",
   ],
   quote:
-    "Hi-fi isn't about hearing more. It's about getting everything else out of the way.",
+    "Hi-Fi bedeutet nicht, mehr zu hören. Es bedeutet, alles andere aus dem Weg zu räumen.",
   inline: "1524678606370-a47ad25cb82a",
 };
 
 export const SPOTLIGHT = {
-  kicker: "Sound of the Month",
-  title: "Side B, in the dark",
+  kicker: "Klang des Monats",
+  title: "Seite B, im Dunkeln",
   image: "1511671782779-c97d3d27a1d4",
-  body: "Our editors' pick for the month — a record engineered for the back half of the night. Dynamic, patient, and impossibly quiet between the notes. Play it loud, then play it quiet. It holds up both ways.",
-  meta: ["180g pressing", "Half-speed master", "Gatefold"],
+  body: "Die Wahl der Redaktion für diesen Monat — eine Platte, konstruiert für die hintere Hälfte der Nacht. Dynamisch, geduldig und unerhört leise zwischen den Tönen. Spiel sie laut, dann spiel sie leise. Sie hält beides aus.",
+  meta: ["180g Pressung", "Halbgeschwindigkeits-Master", "Gatefold-Cover"],
 };
 
 export const GEAR = [
@@ -136,16 +162,16 @@ export const GEAR = [
 export const PARTNERS = [
   "ABBEY ROAD",
   "ELYSIAN AUDIO",
-  "NORTHERN VINYL",
-  "THE LISTENING ROOM",
+  "NORDISCHES VINYL",
+  "DER HÖRRAUM",
   "VERTERE",
   "OCTAVE LABS",
 ];
 
 export const FAQ_FOOTER = {
   columns: [
-    { title: "Magazine", links: ["Current issue", "Archive", "Reviews", "The Long Read"] },
-    { title: "Listen", links: ["Buyer's guides", "Room setup", "Pressing notes", "Glossary"] },
-    { title: "About", links: ["Masthead", "How we test", "Contact", "Ethics"] },
+    { title: "Magazin", links: ["Aktuelle Ausgabe", "Archiv", "Tests", "Die lange Reportage"] },
+    { title: "Hören", links: ["Kaufberatung", "Raumaufstellung", "Pressungsnotizen", "Glossar"] },
+    { title: "Über uns", links: ["Masthead", "So testen wir", "Kontakt", "Ethik"] },
   ],
 };

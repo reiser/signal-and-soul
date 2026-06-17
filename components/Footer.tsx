@@ -12,7 +12,7 @@ export function Footer() {
               {BRAND.name}
             </a>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink-soft">
-              {BRAND.tagline}. An independent quarterly. We buy what we review.
+              {BRAND.tagline}. Ein unabhängiges Quartalsmagazin. Wir kaufen, was wir testen.
             </p>
             <div className="mt-6 flex gap-2">
               {[AtSign, Radio, Music, Rss].map((Icon, i) => (
@@ -49,7 +49,7 @@ export function Footer() {
         </div>
 
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-line pt-6 text-xs text-ink-soft/70 sm:flex-row">
-          <p>© {new Date().getFullYear()} {BRAND.name}. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} {BRAND.name}. Alle Rechte vorbehalten.</p>
           <div className="flex gap-5">
             <a href="#" className="hover:text-ink">Impressum</a>
             <a href="#" className="hover:text-ink">Datenschutz</a>

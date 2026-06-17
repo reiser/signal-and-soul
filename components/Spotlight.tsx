@@ -39,13 +39,13 @@ export function Spotlight() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={img(SPOTLIGHT.image, 900)}
-              alt="The record of the month"
+              alt="Die Platte des Monats"
               loading="lazy"
               className="h-full w-full object-cover"
             />
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent p-6">
               <span className="font-display text-sm italic text-paper/90">
-                Editors&rsquo; pick · Issue 07
+                Wahl der Redaktion · Ausgabe 07
               </span>
             </div>
           </div>
