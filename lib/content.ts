@@ -68,6 +68,12 @@ export const STORIES = [
     excerpt: "We A/B'd the same record across five cuts. The cheapest won. Here's what that tells you.",
     image: "1607853202273-797f1c22a38e",
   },
+  {
+    kicker: "Cartridges",
+    title: "The last half-millimetre",
+    excerpt: "After the table, the arm, the cable and the mat, the cartridge is what finally touches the music. A field guide to choosing one by ear, not by spec.",
+    image: "1452802447250-470a88ac82bc",
+  },
 ];
 
 export const REVIEWS = [
