@@ -50,6 +50,13 @@ test("homepage does not mount the partner logo marquee", () => {
   assert.doesNotMatch(page, /@\/components\/Marquee/);
 });
 
+test("newsletter copy is digital-first", () => {
+  const newsletter = readFileSync(new URL("components/Newsletter.tsx", root), "utf8");
+
+  assert.match(newsletter, /Get the next<br \/>digital issue first\./);
+  assert.doesNotMatch(newsletter, /pressing sells out/i);
+});
+
 test("homepage shows OPUS plus companion product reviews", () => {
   const reviewsMatch = content.match(/export const REVIEWS(?::[^=]+)? = \[([\s\S]*?)\];/);
   const expectedSlugs = [
@@ -75,6 +82,30 @@ test("homepage shows OPUS plus companion product reviews", () => {
   assert.match(reviewsMatch[1], /officialUrl: "https:\/\/www\.rega\.co\.uk\/products\/planar-8"/);
   assert.match(reviewsMatch[1], /officialUrl: "https:\/\/isoacoustics\.com\/home-audio-isolation-products\/gaia-neo-series\/"/);
   assert.doesNotMatch(reviewsMatch[1], /OPUS 1 Black \/ White|OPUS 1 Perspective/);
+});
+
+test("companion reviews stand alone without OPUS mentions", () => {
+  const companionSlugs = [
+    "naim-uniti-nova-pe",
+    "rega-planar-8",
+    "isoacoustics-gaia-neo",
+  ];
+
+  for (const slug of companionSlugs) {
+    const block = content.match(
+      new RegExp(`slug: "${slug}",[\\s\\S]*?(?=\\n  \\{\\n    slug:|\\n\\];)`)
+    )?.[0];
+
+    assert.ok(block, `${slug} review block should be present`);
+    assert.doesNotMatch(block, /\bOPUS\b|OPUS 1/i);
+  }
+});
+
+test("companion review pages do not render OPUS as a related review", () => {
+  const reviewPage = readFileSync(new URL("app/reviews/[slug]/page.tsx", root), "utf8");
+
+  assert.match(reviewPage, /review\.slug === "opus-1"/);
+  assert.match(reviewPage, /item\.slug !== "opus-1"/);
 });
 
 test("review cards link to SEO review routes", () => {

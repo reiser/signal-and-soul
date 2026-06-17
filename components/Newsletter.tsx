@@ -26,7 +26,7 @@ export function Newsletter() {
         <Reveal>
           <Disc3 className="mx-auto h-10 w-10 text-accent-soft" strokeWidth={1.4} />
           <h2 className="font-display mt-6 text-[clamp(2.4rem,6vw,4.5rem)] font-semibold leading-[1.0]">
-            Subscribe before<br />the next pressing sells out.
+            Get the next<br />digital issue first.
           </h2>
           <p className="mx-auto mt-5 max-w-md text-paper/70">
             One email when there&rsquo;s something worth sending. The reviews, the long read, and the record we can&rsquo;t stop playing — free, no noise.

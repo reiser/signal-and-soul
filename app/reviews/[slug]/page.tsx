@@ -77,7 +77,11 @@ export default async function ReviewPage({ params }: ReviewPageProps) {
 
   const heroImage = review.detailImage ?? review.image;
   const heroAlt = review.detailAlt ?? review.alt;
-  const relatedReviews = REVIEWS.filter((item) => item.slug !== review.slug);
+  const relatedReviews = REVIEWS.filter(
+    (item) =>
+      item.slug !== review.slug &&
+      (review.slug === "opus-1" || item.slug !== "opus-1")
+  );
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Review",
