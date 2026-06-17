@@ -124,6 +124,13 @@ export const REVIEWS = [
     rating: 4,
     image: "1484704849700-f032a568e944",
   },
+  {
+    name: "Der Porzellan-Elefant",
+    sub: "Hörraum-Objekt, manuell glasiert",
+    verdict: "Kein Lautsprecher, kein Kabel, kein Messwert — und trotzdem verändert er den Raum. Eine Lanze für die kleine, schwere Figur, die zwischen den Boxen steht und den ersten Reflexionen den Schrecken nimmt.",
+    rating: 4.5,
+    image: "1576020799627-aeac74d58064",
+  },
 ];
 
 export const FEATURE = {
