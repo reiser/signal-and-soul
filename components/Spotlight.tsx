@@ -39,8 +39,10 @@ export function Spotlight() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={img(SPOTLIGHT.image, 900)}
-              alt="Die Platte des Monats"
-              loading="lazy"
+              alt="Album of the month"
+              loading="eager"
+              decoding="async"
+              fetchPriority="high"
               className="h-full w-full object-cover"
             />
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent p-6">

@@ -36,7 +36,10 @@ export function OpusOneFeature() {
           <div className="aspect-[16/8] overflow-hidden">
             <motion.img
               src={OPUS_ONE.cover}
-              alt={`${OPUS_ONE.brand} OPUS 1 horn loudspeaker in a listening room`}
+              alt={`${OPUS_ONE.brand} OPUS 1 horn loudspeaker in a treated room`}
+              loading="eager"
+              decoding="async"
+              fetchPriority="high"
               style={{ y }}
               className="h-[118%] w-full object-cover"
             />

@@ -63,7 +63,9 @@ export function Feature() {
           <img
             src={img(FEATURE.inline, 1100)}
             alt="A turntable in a treated listening room"
-            loading="lazy"
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
             className="aspect-[16/9] w-full object-cover"
           />
         </Reveal>

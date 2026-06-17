@@ -74,6 +74,9 @@ export function Hero() {
             <motion.img
               src={img(HERO.image, 1100)}
               alt="A pair of closed-back reference studio headphones"
+              loading="eager"
+              decoding="async"
+              fetchPriority="high"
               style={{ y, scale }}
               className="absolute inset-0 h-[115%] w-full object-cover"
             />
