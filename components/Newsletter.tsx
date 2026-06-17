@@ -29,7 +29,7 @@ export function Newsletter() {
             Subscribe before<br />the next pressing sells out.
           </h2>
           <p className="mx-auto mt-5 max-w-md text-paper/70">
-            One email when there's something worth sending. The reviews, the long read, and the record we can't stop playing — free, no noise.
+            One email when there&rsquo;s something worth sending. The reviews, the long read, and the record we can&rsquo;t stop playing — free, no noise.
           </p>
         </Reveal>
 
@@ -78,7 +78,7 @@ export function Newsletter() {
             <span className="grid h-6 w-6 place-items-center rounded-full bg-accent text-white">
               <Check className="h-3.5 w-3.5" />
             </span>
-            You're on the list for the next issue.
+            You&rsquo;re on the list for the next issue.
           </motion.div>
         )}
       </AnimatePresence>

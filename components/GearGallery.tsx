@@ -10,7 +10,7 @@ export function GearGallery() {
       <Reveal className="mx-auto mb-12 max-w-7xl px-5 sm:px-8">
         <Kicker>The objects</Kicker>
         <h2 className="font-display mt-4 text-4xl font-semibold sm:text-5xl">
-          Gear we'd actually live with.
+          Gear we&rsquo;d actually live with.
         </h2>
       </Reveal>
 
